@@ -1,0 +1,33 @@
+{
+  "name": "cy-bdd-test",
+  "version": "1.0.0",
+  "description": "cypress with cucumber example",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:tests": "cypress run",
+    "cy:run:chrome": "cypress run --browser chrome"
+  },
+  "keywords": [
+    "cypress",
+    "bdd",
+    "cucumber"
+  ],
+  "author": "Shoaib",
+  "license": "ISC",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^14.0.0",
+    "@cypress/webpack-preprocessor": "^5.15.5",
+    "circular-json": "^0.5.9",
+    "cypress": "^11.2.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.3.0", 
+    "cypress-xpath": "^2.0.1",
+    "prettier": "^2.7.1",
+    "webpack": "^5.75.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "integration\\cucumber-tests\\stepDefinations\\*.js",
+    "nonGlobalStepDefinitions": true
+  }
+}
